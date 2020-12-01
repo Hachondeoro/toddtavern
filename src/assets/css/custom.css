@@ -1,0 +1,7 @@
+.new-line {
+  white-space: pre-line;
+}
+
+h5 {
+  white-space: pre-wrap;
+}

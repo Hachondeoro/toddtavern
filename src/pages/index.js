@@ -1,6 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 
+// styles
+import "assets/css/bootstrap.min.css"
+import "assets/scss/paper-kit.scss"
+import "assets/demo/demo.css"
+import "assets/demo/react-demo.css"
+
+//pages
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
@@ -15,7 +22,8 @@ const IndexPage = () => (
       <Image />
     </div>
     <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
+    <Link to="/landingpage/">Go to landingpage"</Link>
   </Layout>
 )
 
