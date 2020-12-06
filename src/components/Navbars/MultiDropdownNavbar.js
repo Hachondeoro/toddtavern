@@ -1,56 +1,44 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from "react"
+import { Link } from "gatsby"
 // nodejs library that concatenates strings
-import classnames from "classnames";
-// JavaScript plugin that hides or shows a component based on your scroll
-import Headroom from "headroom.js";
+import classnames from "classnames"
+
 // reactstrap components
-import {
-  Collapse,
-  NavbarBrand,
-  Navbar,
-  Nav,
-  Container,
-} from "reactstrap";
-import { information } from "assets/information";
-// core components
+import { Collapse, NavbarBrand, Navbar, Nav, Container } from "reactstrap"
 
 function MultiDropdownNavbar() {
-  const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
-  const [bodyClick, setBodyClick] = React.useState(false);
-  const [collapseOpen, setCollapseOpen] = React.useState(false);
+  const [navbarColor, setNavbarColor] = React.useState("navbar-transparent")
+  const [bodyClick, setBodyClick] = React.useState(false)
+  const [collapseOpen, setCollapseOpen] = React.useState(false)
   React.useEffect(() => {
-    let headroom = new Headroom(document.getElementById("navbar-main"));
-    // initialise
-    headroom.init();
-
     const updateNavbarColor = () => {
       if (
-        document.documentElement.scrollTop > 499 ||
-        document.body.scrollTop > 499
+        document.documentElement.scrollTop > 899 ||
+        document.body.scrollTop > 899
       ) {
-        setNavbarColor("bg-info");
+        setNavbarColor("black")
       } else if (
-        document.documentElement.scrollTop < 500 ||
-        document.body.scrollTop < 500
+        document.documentElement.scrollTop < 900 ||
+        document.body.scrollTop < 900
       ) {
-        setNavbarColor("navbar-transparent");
+        setNavbarColor("navbar-transparent")
       }
-    };
-    window.addEventListener("scroll", updateNavbarColor);
+    }
+
+    window.addEventListener("scroll", updateNavbarColor)
     return function cleanup() {
-      window.removeEventListener("scroll", updateNavbarColor);
-    };
-  });
+      window.removeEventListener("scroll", updateNavbarColor)
+    }
+  })
   return (
     <>
       {bodyClick ? (
         <div
           id="bodyClick"
           onClick={() => {
-            document.documentElement.classList.toggle("nav-open");
-            setBodyClick(false);
-            setCollapseOpen(false);
+            document.documentElement.classList.toggle("nav-open")
+            setBodyClick(false)
+            setCollapseOpen(false)
           }}
         />
       ) : null}
@@ -66,9 +54,9 @@ function MultiDropdownNavbar() {
               id="navigation"
               type="button"
               onClick={() => {
-                document.documentElement.classList.toggle("nav-open");
-                setBodyClick(true);
-                setCollapseOpen(true);
+                document.documentElement.classList.toggle("nav-open")
+                setBodyClick(true)
+                setCollapseOpen(true)
               }}
             >
               <span className="navbar-toggler-bar bar1"></span>
@@ -77,22 +65,38 @@ function MultiDropdownNavbar() {
             </button>
           </div>
           <Collapse navbar isOpen={collapseOpen}>
-
             <Nav className="ml-auto" navbar>
-              {information.map(item =>
-                <NavbarBrand
-                  id="navbar-brand" to={item.route} tag={Link}>
-                  <i className="nc-icon nc-minimal-right" />
-                  {" "} {item.name}
-                </NavbarBrand>
-              )}
-
+              <NavbarBrand id="navbar-brand" to="/djbistro#intro" tag={Link}>
+                <i className="nc-icon nc-minimal-right" /> DJ's Bistro
+              </NavbarBrand>
+              <NavbarBrand id="navbar-brand" to="/maximbar#intro" tag={Link}>
+                <i className="nc-icon nc-minimal-right" /> Maxim's Bar
+              </NavbarBrand>
+              <NavbarBrand
+                id="navbar-brand"
+                to="/accomodation#intro"
+                tag={Link}
+              >
+                <i className="nc-icon nc-minimal-right" /> Accomodation
+              </NavbarBrand>
+              <NavbarBrand id="navbar-brand" to="/functions#intro" tag={Link}>
+                <i className="nc-icon nc-minimal-right" /> Functions/Facilities
+              </NavbarBrand>
+              <NavbarBrand id="navbar-brand" to="/bottleshop#intro" tag={Link}>
+                <i className="nc-icon nc-minimal-right" /> Bottle Shop
+              </NavbarBrand>
+              <NavbarBrand id="navbar-brand" to="/contactus#intro" tag={Link}>
+                <i className="nc-icon nc-minimal-right" /> Contact Us
+              </NavbarBrand>
+              <NavbarBrand id="navbar-brand" to="/history#intro" tag={Link}>
+                <i className="nc-icon nc-minimal-right" /> History
+              </NavbarBrand>
             </Nav>
           </Collapse>
         </Container>
       </Navbar>
     </>
-  );
+  )
 }
 
-export default MultiDropdownNavbar;
+export default MultiDropdownNavbar

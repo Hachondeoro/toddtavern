@@ -1,49 +1,29 @@
 import React from "react"
 
 // reactstrap components
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardTitle,
-  Form,
-  Input,
-  Container,
-  Row,
-  Col,
-} from "reactstrap"
+import { Container, Row, Col } from "reactstrap"
 
 // core components
 import MultiDropdownNavbar from "components/Navbars/MultiDropdownNavbar.js"
 import LandingPageHeader from "components/Headers/LandingPageHeader.js"
-import FooterWhite from "components/Footers/FooterWhite.js"
-import { information } from "assets/information"
+import FooterAboutUs from "components/Footers/FooterAboutUs.js"
+import { djbistro } from "assets/information"
 
 function DjBistro() {
-  document.documentElement.classList.remove("nav-open")
-  React.useEffect(() => {
-    document.body.classList.add("landing-page")
-    window.scrollTo(0, 0)
-    document.body.scrollTop = 0
-    return function cleanup() {
-      document.body.classList.remove("landing-page")
-    }
-  })
   return (
     <>
       <MultiDropdownNavbar />
       <LandingPageHeader />
-      <div className="wrapper">
+      <div className="wrapper" id="intro">
         <div className="section text-center landing-section">
           <Container>
             <Row>
-              <Col className="ml-auto mr-auto" md="8">
-                <h2 className="title">{information[0].name}</h2>
-                <h5>{information[0].description}</h5>
+              <Col className="ml-auto mr-auto" md="5">
+                <h2 className="title">{djbistro[0].name}</h2>
+                <h5>{djbistro[0].description}</h5>
                 <br />
               </Col>
-              <Col>
+              <Col className="m-auto" md="7">
                 <img
                   alt="FUCKING HELL NO IMAGE"
                   src={require("assets/images/djbistro.jpg")}
@@ -56,6 +36,7 @@ function DjBistro() {
           </Container>
         </div>
       </div>
+      <FooterAboutUs />
     </>
   )
 }

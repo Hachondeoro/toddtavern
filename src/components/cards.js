@@ -1,26 +1,15 @@
 import React from "react"
 
 // reactstrap components
-import {
-  Badge,
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardTitle,
-  Container,
-  Row,
-  Col,
-  UncontrolledTooltip,
-} from "reactstrap"
+import { Button, Card, CardBody, CardFooter, CardTitle } from "reactstrap"
 
 function SectionCards(props) {
   return (
     <>
       <Card className="card-blog">
         <div className="card-image">
-          <a href="#pablo" onClick={e => e.preventDefault()}>
-            <img alt="..." className="img" src={require(`${props.image}`)} />
+          <a href={props.link} target="_blank">
+            <img alt="..." className="img" src={props.image} />
           </a>
         </div>
         <CardBody className="text-center">
@@ -31,7 +20,7 @@ function SectionCards(props) {
               className="btn-round"
               color="danger"
               href={props.link}
-              onClick={e => e.preventDefault()}
+              target="_blank"
             >
               Book Now
             </Button>

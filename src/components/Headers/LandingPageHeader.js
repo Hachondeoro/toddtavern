@@ -1,29 +1,10 @@
-import React from "react";
+import React from "react"
 
 // reactstrap components
-import { Button, Container } from "reactstrap";
-import { information } from "assets/information";
-
-// core components
+import { Button, Container } from "reactstrap"
 
 function LandingPageHeader() {
-  let pageHeader = React.createRef();
-
-  React.useEffect(() => {
-    if (window.innerWidth > 991) {
-      const updateScroll = () => {
-        let windowScrollTop = window.pageYOffset / 3;
-        pageHeader.current.style.transform =
-          "translate3d(0," + windowScrollTop + "px,0)";
-      };
-      window.addEventListener("scroll", updateScroll);
-      return function cleanup() {
-        window.removeEventListener("scroll", updateScroll);
-      };
-    }
-  });
-
-
+  let pageHeader = React.createRef()
   return (
     <>
       <div
@@ -33,7 +14,6 @@ function LandingPageHeader() {
           backgroundImage:
             "url(" + require("assets/images/billar-pool.jpg") + ")",
         }}
-
       >
         <div className="filter" />
         <div className="content-center">
@@ -44,9 +24,7 @@ function LandingPageHeader() {
                 src={require("assets/images/todd-logo.svg")}
               />
               <h1 className="title">TODD TAVERN</h1>
-              <h3 className="description">
-                The last traditional pub in town
-              </h3>
+              <h3 className="description">The last traditional pub in town</h3>
               <br />
               <Button
                 className="btn-round"
@@ -62,7 +40,7 @@ function LandingPageHeader() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default LandingPageHeader;
+export default LandingPageHeader
