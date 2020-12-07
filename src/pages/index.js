@@ -1,30 +1,21 @@
-import React from "react"
-import { Link } from "gatsby"
-
 // styles
 import "assets/css/bootstrap.min.css"
 import "assets/scss/paper-kit.scss"
 import "assets/demo/demo.css"
 import "assets/demo/react-demo.css"
 
-//pages
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import React from "react"
+import MultiDropdownNavbar from "components/Navbars/MultiDropdownNavbar.js"
+import LandingPageHeader from "components/Headers/LandingPageHeader.js"
+import FooterAboutUs from "components/Footers/FooterAboutUs.js"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
-    <Link to="/landingpage/">Go to landingpage"</Link>
-  </Layout>
-)
-
+function IndexPage() {
+  return (
+    <>
+      <MultiDropdownNavbar />
+      <LandingPageHeader />
+      <FooterAboutUs />
+    </>
+  )
+}
 export default IndexPage
