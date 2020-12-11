@@ -1,19 +1,8 @@
 import React from "react"
-// react plugin used to create DropdownMenu for selecting items
-import Select from "react-select"
-
 // reactstrap components
-import { Button, FormGroup, Container, Row, Col } from "reactstrap"
+import { Container, Row, Col } from "reactstrap"
 
 function FooterAboutUs() {
-  const [languageSelect, setLanguageSelect] = React.useState({
-    value: "en",
-    label: "English",
-  })
-  const [curencySelect, setCurencySelect] = React.useState({
-    value: "USD",
-    label: "USD",
-  })
   return (
     <>
       <footer className="footer footer-big footer-black">
@@ -23,7 +12,7 @@ function FooterAboutUs() {
               <Row>
                 <Col md="3" sm="3" xs="6">
                   <img
-                    alt="FUCKING HELL NO IMAGE"
+                    alt="Todd Tavern Logo"
                     src={require("assets/images/todd-logo.svg")}
                   />
                 </Col>

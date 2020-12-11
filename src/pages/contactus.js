@@ -7,14 +7,14 @@ import MultiDropdownNavbar from "components/Navbars/MultiDropdownNavbar.js"
 import LandingPageHeader from "components/Headers/LandingPageHeader.js"
 import FooterAboutUs from "components/Footers/FooterAboutUs.js"
 import { contactus } from "assets/information"
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
+// import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
 
 // core components
 const position = [51.505, -0.09]
 
-function DjBistro() {
-  document.documentElement.classList.remove("nav-open")
+function ContactUs() {
   React.useEffect(() => {
+    document.documentElement.classList.remove("nav-open")
     document.body.classList.add("landing-page")
     // window.scrollTo(0, 0)
     // document.body.scrollTop = 0
@@ -56,7 +56,7 @@ function DjBistro() {
           </Container>
         </div>
       </div>
-      <div>
+      {/* <div>
         <MapContainer
           center={[-23.7034237, 133.8809373]}
           zoom={16}
@@ -70,10 +70,10 @@ function DjBistro() {
             </Popup>
           </Marker>
         </MapContainer>
-      </div>
+      </div> */}
       <FooterAboutUs />
     </>
   )
 }
 
-export default DjBistro
+export default ContactUs

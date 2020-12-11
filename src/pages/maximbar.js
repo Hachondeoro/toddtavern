@@ -10,8 +10,8 @@ import FooterAboutUs from "components/Footers/FooterAboutUs.js"
 import { maximbar } from "assets/information"
 
 function MaximBar() {
-  document.documentElement.classList.remove("nav-open")
   React.useEffect(() => {
+    document.documentElement.classList.remove("nav-open")
     document.body.classList.add("landing-page")
     return function cleanup() {
       document.body.classList.remove("landing-page")
@@ -33,19 +33,46 @@ function MaximBar() {
             </Row>
             <Row>
               <Col md="4">
-                <img src={require("assets/images/maximbar1.jpg")} />
-                <img src={require("assets/images/maximbar2.jpg")} />
-                <img src={require("assets/images/maximbar3.jpg")} />
+                <img
+                  src={require("assets/images/maximbar1.jpg")}
+                  alt="Maximbar"
+                />
+                <img
+                  src={require("assets/images/maximbar2.jpg")}
+                  alt="Maximbar"
+                />
+                <img
+                  src={require("assets/images/maximbar3.jpg")}
+                  alt="Maximbar"
+                />
               </Col>
               <Col md="4">
-                <img src={require("assets/images/maximbar4.jpg")} />
-                <img src={require("assets/images/maximbar5.jpg")} />
-                <img src={require("assets/images/maximbar6.jpg")} />
+                <img
+                  src={require("assets/images/maximbar4.jpg")}
+                  alt="Maximbar"
+                />
+                <img
+                  src={require("assets/images/maximbar5.jpg")}
+                  alt="Maximbar"
+                />
+                <img
+                  src={require("assets/images/maximbar6.jpg")}
+                  alt="Maximbar"
+                />
               </Col>
               <Col md="4">
-                <img src={require("assets/images/maximbar7.jpg")} />
-                <img src={require("assets/images/maximbar8.jpg")} />
-                <img src={require("assets/images/maximbar9.jpg")} />
+                <img
+                  src={require("assets/images/maximbar7.jpg")}
+                  alt="Maximbar"
+                />
+                <img
+                  src={require("assets/images/maximbar8.jpg")}
+                  alt="Maximbar"
+                />
+                <img
+                  src={require("assets/images/maximbar9.jpg")}
+                  alt="Maximbar"
+                />
               </Col>
             </Row>
             <br />

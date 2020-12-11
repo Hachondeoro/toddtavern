@@ -12,9 +12,9 @@ import SectionCards from "components/cards.js"
 import room1 from "assets/images/accomodation-room1.png"
 import room2 from "assets/images/accomodation-room2.png"
 
-function DjBistro() {
-  document.documentElement.classList.remove("nav-open")
+function Accomodation() {
   React.useEffect(() => {
+    document.documentElement.classList.remove("nav-open")
     document.body.classList.add("landing-page")
 
     return function cleanup() {
@@ -63,4 +63,4 @@ function DjBistro() {
   )
 }
 
-export default DjBistro
+export default Accomodation

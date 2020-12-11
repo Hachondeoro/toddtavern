@@ -20,7 +20,7 @@ function LandingPageHeader() {
           <Container>
             <div className="motto">
               <img
-                alt="FUCKING HELL NO IMAGE"
+                alt="Logo Company"
                 src={require("assets/images/todd-logo.svg")}
               />
               <h1 className="title">TODD TAVERN</h1>

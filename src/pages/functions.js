@@ -11,8 +11,8 @@ import { functions } from "assets/information"
 import functionroom from "assets/images/function-room.png"
 
 function DjBistro() {
-  document.documentElement.classList.remove("nav-open")
   React.useEffect(() => {
+    document.documentElement.classList.remove("nav-open")
     document.body.classList.add("landing-page")
     return function cleanup() {
       document.body.classList.remove("landing-page")
@@ -34,7 +34,7 @@ function DjBistro() {
                 <h5>{functions[1].description}</h5>
               </Col>
               <Col className="ml-auto mr-auto mt-auto mb-auto" md="6">
-                <img src={functionroom} />
+                <img src={functionroom} alt="Functions" />
               </Col>
             </Row>
             <br />

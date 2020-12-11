@@ -13,13 +13,13 @@ function MultiDropdownNavbar() {
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
-        document.documentElement.scrollTop > 899 ||
-        document.body.scrollTop > 899
+        document.documentElement.scrollTop > 749 ||
+        document.body.scrollTop > 749
       ) {
         setNavbarColor("black")
       } else if (
-        document.documentElement.scrollTop < 900 ||
-        document.body.scrollTop < 900
+        document.documentElement.scrollTop < 750 ||
+        document.body.scrollTop < 750
       ) {
         setNavbarColor("navbar-transparent")
       }

@@ -10,9 +10,9 @@ import FooterAboutUs from "components/Footers/FooterAboutUs.js"
 import { bottleshop } from "assets/information"
 import thirstycamellogo from "assets/images/thirstycamellogo.png"
 
-function DjBistro() {
-  document.documentElement.classList.remove("nav-open")
+function Bottleshop() {
   React.useEffect(() => {
+    document.documentElement.classList.remove("nav-open")
     document.body.classList.add("landing-page")
     return function cleanup() {
       document.body.classList.remove("landing-page")
@@ -28,7 +28,11 @@ function DjBistro() {
             <Row>
               <Col className="ml-auto mr-auto">
                 <h2 className="title">{bottleshop[0].name}</h2>
-                <img src={thirstycamellogo} width="100%" />
+                <img
+                  src={thirstycamellogo}
+                  alt="thirsty camel logo"
+                  width="100%"
+                />
                 <h5>{bottleshop[0].description}</h5>
                 <br />
                 <h2 className="title">{bottleshop[1].name}</h2>
@@ -45,4 +49,4 @@ function DjBistro() {
   )
 }
 
-export default DjBistro
+export default Bottleshop

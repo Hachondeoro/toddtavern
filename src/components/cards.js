@@ -21,6 +21,7 @@ function SectionCards(props) {
               color="danger"
               href={props.link}
               target="_blank"
+              rel="noreferrer"
             >
               Book Now
             </Button>

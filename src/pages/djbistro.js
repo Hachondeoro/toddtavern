@@ -25,7 +25,7 @@ function DjBistro() {
               </Col>
               <Col className="m-auto" md="7">
                 <img
-                  alt="FUCKING HELL NO IMAGE"
+                  alt="DJ Bistro"
                   src={require("assets/images/djbistro.jpg")}
                   width="100%"
                 />

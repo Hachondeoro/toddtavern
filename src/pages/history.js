@@ -36,9 +36,9 @@ const carouselItems = [
   },
 ]
 
-function DjBistro() {
-  document.documentElement.classList.remove("nav-open")
+function History() {
   React.useEffect(() => {
+    document.documentElement.classList.remove("nav-open")
     document.body.classList.add("landing-page")
     // window.scrollTo(0, 0)
     // document.body.scrollTop = 0
@@ -167,4 +167,4 @@ function DjBistro() {
   )
 }
 
-export default DjBistro
+export default History
